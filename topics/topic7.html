@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 7: Building Numbers!</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 7: Building Numbers! (Forming Numbers)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 7
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>Let's Be Number Architects!</h2>
+                <p>Now that you know about place value, comparing, and ordering, let's build our own numbers using rules!</p>
+
+                <h3>Building with Given Digits</h3>
+                <p>Sometimes, you'll get a set of digits (like number cards) and need to make a number.</p>
+                <p>Example: Use the digits <strong>8, 2, 5</strong> to make the smallest number (using each digit once).</p>
+                <ul>
+                    <li>To make the smallest number, put the smallest digit in the highest place value (leftmost).</li>
+                    <li>Smallest digit is 2. Put it first.</li>
+                    <li>Next smallest is 5. Put it second.</li>
+                    <li>Largest is 8. Put it last.</li>
+                </ul>
+                <p>The smallest number is <strong>258</strong>.</p>
+                <p>What about the largest number using 8, 2, 5? (Hint: Put the largest digit first!)</p>
+
+                <h3>Building with Place Value Clues</h3>
+                <p>Other times, you get clues about which digit goes in which place value house.</p>
+                <p>Example: Build a number with:</p>
+                <ul>
+                    <li>5 at Lakhs place</li>
+                    <li>8 at Ten Thousands place</li>
+                    <li>(No Thousands mentioned!)</li>
+                    <li>3 at Hundreds place</li>
+                    <li>1 at Tens place</li>
+                    <li>4 at Ones place</li>
+                </ul>
+                <p>Remember Zero the Hero! If a place isn't mentioned, put a zero there.</p>
+                <p>The number is: <strong>5,80,314</strong></p>
+
+                <h3>Building with Special Rules (Smallest/Largest/Even/Odd)</h3>
+                <p>Sometimes there are extra rules!</p>
+                <ul>
+                    <li><strong>Smallest/Largest:</strong> Remember to put smaller digits first for the smallest number, and larger digits first for the largest number. Watch out if zero is one of the digits – it usually can't go in the very first spot (unless it's the only digit!).</li>
+                    <li><strong>Even/Odd:</strong> An even number ends in 0, 2, 4, 6, or 8. An odd number ends in 1, 3, 5, 7, or 9. Make sure the digit in the Ones place follows the rule!</li>
+                </ul>
+
+                <h4>Example: Smallest 6-digit number with 8 at Hundreds place.</h4>
+                <ul>
+                    <li>Smallest 6-digit number starts with 1 (can't be 0).</li>
+                    <li>We need 8 in the Hundreds place.</li>
+                    <li>Fill the other places with the smallest possible digit (0).</li>
+                </ul>
+                <p>The number is: <strong>1,00,800</strong></p>
+
+                <h4>Example: Largest 6-digit even number starting with 5 (using digits 0, 1, 2, 3, 4, 5, 6, 8, 9 once each - simplified example).</h4>
+                <p>Let's use digits <strong>5, 9, 8, 2, 1, 0</strong> to make the largest 6-digit even number starting with 5.</p>
+                <ul>
+                    <li>Starts with 5: <strong>5 _ _ _ _ _</strong></li>
+                    <li>To be largest, use the next biggest digits: 9, 8, 2, 1, 0.</li>
+                    <li>To be even, it must end in 0, 2, or 8. Let's use the smallest even digit (0) at the end to keep the other places large.</li>
+                    <li>Fill the middle with the remaining largest digits (9, 8, 2, 1) in descending order.</li>
+                </ul>
+                <p>The number is: <strong>5,98,210</strong></p>
+
+                <!-- Interactive Number Building Game -->
+                <div class="interactive-build visual-aid" style="background-color: #ede7f6; border-color: #7e57c2;"> <!-- Reusing class, slight style variation -->
+                    <h4>Number Builder Challenge!</h4>
+                    <p>Use these digits (only once each):</p>
+                    <div id="build-digits-display" class="build-digits">
+                        <!-- Digits will appear here -->
+                        <span>8</span> <span>2</span> <span>5</span>
+                    </div>
+                    <p>Build the: <strong id="build-rule">Smallest Number</strong></p>
+                    <input type="number" id="build-input" placeholder="Enter the number">
+                    <button id="build-check-btn">Check Number</button>
+                    <div id="build-feedback" class="feedback" style="margin-top: 10px;"></div>
+                    <button id="build-next-btn" style="margin-top: 10px;">New Challenge</button>
+                </div>
+
+                <h3>Finding the Next Number (Successor)</h3>
+                <p>Sometimes, after building a number, you might be asked for its <strong>successor</strong>. That's just the number that comes right after it (add 1!).</p>
+                <p>Example: The successor of 258 is 259.</p>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic6.html">Previous Topic: Ordering Numbers</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic8.html">Next Topic: Number Neighbors</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic7
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic7');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveNumberBuilder(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

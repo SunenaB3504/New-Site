@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 6: Putting Numbers in Order</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 6: Putting Numbers in Order</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 6
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>Lining Up Numbers!</h2>
+                <p>Now that you're a champ at comparing numbers (knowing which is bigger or smaller), putting them in order is super easy!</p>
+                <p>Imagine lining up your friends from shortest to tallest, or tallest to shortest. We can do the same with numbers!</p>
+
+                <h3>Ascending Order: Going Up!</h3>
+                <p><strong>Ascending order</strong> means arranging numbers from the <strong>smallest to the greatest</strong>.</p>
+                <p>Think of climbing up stairs: 1, 2, 3, 4...</p>
+                <p>Example: Let's arrange <strong>500, 150, 800</strong> in ascending order.</p>
+                <ol>
+                    <li>Compare the numbers: 150 is the smallest.</li>
+                    <li>Next smallest is 500.</li>
+                    <li>The greatest is 800.</li>
+                </ol>
+                <p>So, the ascending order is: <strong>150, 500, 800</strong></p>
+
+                <h3>Descending Order: Going Down!</h3>
+                <p><strong>Descending order</strong> means arranging numbers from the <strong>greatest to the smallest</strong>.</p>
+                <p>Think of sliding down a slide: 10, 9, 8, 7...</p>
+                <p>Example: Let's arrange <strong>500, 150, 800</strong> in descending order.</p>
+                <ol>
+                    <li>Compare the numbers: 800 is the greatest.</li>
+                    <li>Next greatest is 500.</li>
+                    <li>The smallest is 150.</li>
+                </ol>
+                <p>So, the descending order is: <strong>800, 500, 150</strong></p>
+
+                <h3>Ordering Big Numbers</h3>
+                <p>It works the same way for big numbers! Just use your comparison skills.</p>
+                <p>Example: Arrange the river lengths <strong>4,500m, 6,200m, 3,900m</strong> in descending order (longest to shortest).</p>
+                <ul>
+                    <li>Compare: 6,200 is the biggest.</li>
+                    <li>Next biggest is 4,500.</li>
+                    <li>Smallest is 3,900.</li>
+                </ul>
+                <p>Descending order: <strong>6,200m, 4,500m, 3,900m</strong></p>
+
+                <!-- Interactive Number Ordering Game -->
+                <div class="interactive-order visual-aid" style="background-color: #fff9c4; border-color: #fdd835;"> <!-- Reusing class, slight style variation -->
+                    <h4>Ordering Practice!</h4>
+                    <p>Arrange these numbers in <strong id="order-type">Ascending</strong> order:</p>
+                    <div id="order-numbers-display" class="order-numbers">
+                        <!-- Numbers to order will appear here -->
+                        <span>100</span> <span>50</span> <span>200</span>
+                    </div>
+                    <p>Enter the numbers in the correct order below (separated by commas):</p>
+                    <input type="text" id="order-input" placeholder="e.g., 50, 100, 200">
+                    <button id="order-check-btn">Check Order</button>
+                    <div id="order-feedback" class="feedback" style="margin-top: 10px;"></div>
+                    <button id="order-next-btn" style="margin-top: 10px;">Next Set</button>
+                </div>
+
+                <h3>Using Ordering Skills</h3>
+                <p>Knowing how to order numbers helps solve other fun problems, like:</p>
+                <ul>
+                    <li>Finding the smallest or largest number you can make with certain digits.</li>
+                    <li>Putting scores or measurements in order.</li>
+                </ul>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic5.html">Previous Topic: Comparing Numbers</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic7.html">Next Topic: Building Numbers</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic6
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic6');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveOrderingGame(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

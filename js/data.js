@@ -89,6 +89,82 @@ const chapterData = {
                 { id: "ex5-10", type: "fill-in-blank", question: "Which number is smaller: 77,770 or 70,777?", answer: "70,777", points: 10, hint: "Compare the digits in the Thousands place." }
             ],
             badgeId: "badge_topic5"
+        },
+        { // Topic 6
+            id: "topic6",
+            title: "Putting Numbers in Order",
+            file: "topics/topic6.html",
+            exercises: [
+                // 10 new exercises for Topic 6
+                { id: "ex6-1", type: "fill-in-blank", question: "Arranging numbers from greatest to smallest is called __ order.", answer: "descending", points: 10 },
+                { id: "ex6-2", type: "fill-in-blank", question: "Arrange in ascending order: 99, 101, 9. Write the first number: __", answer: "9", points: 15, hint: "Ascending means smallest to greatest." },
+                { id: "ex6-3", type: "fill-in-blank", question: "Arrange in descending order: 5050, 5500, 5005. Write the last number: __", answer: "5005", points: 15 },
+                { id: "ex6-4", type: "fill-in-blank", question: "What is the smallest number in this list: 10,001, 9,999, 10,100?", answer: "9,999", points: 10, hint: "Compare digits or number of digits." },
+                { id: "ex6-5", type: "fill-in-blank", question: "What is the greatest number in this list: 4,56,789, 4,65,789, 4,56,879?", answer: "4,65,789", points: 15, hint: "Compare starting from the left." },
+                { id: "ex6-6", type: "fill-in-blank", question: "Arrange in ascending order: 210, 120, 21. Write the numbers separated by commas: __, __, __", answer: ["21", "120", "210"], points: 20 },
+                { id: "ex6-7", type: "fill-in-blank", question: "Arrange in descending order: 8008, 8800, 8080. Write the numbers separated by commas: __, __, __", answer: ["8800", "8080", "8008"], points: 20 },
+                { id: "ex6-8", type: "fill-in-blank", question: "Which order puts numbers from smallest to greatest? (ascending/descending)", answer: "ascending", points: 10 },
+                { id: "ex6-9", type: "fill-in-blank", question: "Find the smallest number: 3,03,303, 3,30,033, 3,03,033.", answer: "3,03,033", points: 15 },
+                { id: "ex6-10", type: "fill-in-blank", question: "Find the greatest number: 99,099, 90,999, 99,909.", answer: "99,909", points: 15 }
+            ],
+            badgeId: "badge_topic6"
+        },
+        { // Topic 7
+            id: "topic7",
+            title: "Building Numbers! (Forming Numbers)",
+            file: "topics/topic7.html",
+            exercises: [
+                // 10 new exercises for Topic 7
+                { id: "ex7-1", type: "fill-in-blank", question: "Form the largest 3-digit number using 7, 0, 5 (use each once): __", answer: "750", points: 15, hint: "Put the largest digit first." },
+                { id: "ex7-2", type: "fill-in-blank", question: "Form a number with 6 Lakhs, 2 Thousands, 9 Tens: __", answer: "602090", points: 20, hint: "Use zeros for Ten Thousands, Hundreds, and Ones." },
+                { id: "ex7-3", type: "fill-in-blank", question: "Form the smallest 4-digit number using 3, 0, 8, 1 (use each once): __", answer: "1038", points: 20, hint: "Smallest number cannot start with 0 (unless it's just 0)." },
+                { id: "ex7-4", type: "fill-in-blank", question: "Form the largest 5-digit number using 4, 4, 9, 1, 8: __", answer: "98441", points: 15, hint: "Use the digits available, largest first." },
+                { id: "ex7-5", type: "fill-in-blank", question: "Form the smallest 6-digit number with 5 in the Ten Thousands place: __", answer: "150000", points: 20, hint: "Smallest 6-digit starts with 1. Fill other places with 0." },
+                { id: "ex7-6", type: "fill-in-blank", question: "Form the largest 4-digit ODD number using 2, 6, 7, 9 (use each once): __", answer: "9627", points: 20, hint: "Must end in an odd digit. Make the start as large as possible." },
+                { id: "ex7-7", type: "fill-in-blank", question: "Form the smallest 5-digit EVEN number using 1, 0, 2, 3, 4 (use each once): __", answer: "10234", points: 20, hint: "Must end in 0, 2, or 4. Smallest overall, can't start with 0." },
+                { id: "ex7-8", type: "fill-in-blank", question: "Form a 6-digit number with 48 thousands and 3 ones: __", answer: "48003", points: 15, hint: "48 thousands means 4 Ten Thousands and 8 Thousands. What about other places?" }, // Note: This forms a 5-digit number based on interpretation. Adjust if 6-digit is strictly required (e.g., 148003). Let's assume 48003.
+                { id: "ex7-9", type: "fill-in-blank", question: "What is the successor of the largest 4-digit number?", answer: "10000", points: 10, hint: "Largest 4-digit is 9999." },
+                { id: "ex7-10", type: "fill-in-blank", question: "Form a number: 9 ones, 4 lakhs, 3 tens, 1 thousand, 6 hundreds. __", answer: "401639", points: 20, hint: "Put each digit in its correct place value spot." }
+            ],
+            badgeId: "badge_topic7"
+        },
+        { // Topic 8
+            id: "topic8",
+            title: "Number Neighbors (Successor & Predecessor)",
+            file: "topics/topic8.html",
+            exercises: [
+                // 10 exercises for Topic 8
+                { id: "ex8-1", type: "fill-in-blank", question: "What is the successor of 109?", answer: "110", points: 10, hint: "Successor means add 1." },
+                { id: "ex8-2", type: "fill-in-blank", question: "What is the predecessor of 300?", answer: "299", points: 10, hint: "Predecessor means subtract 1." },
+                { id: "ex8-3", type: "fill-in-blank", question: "The successor of 9,999 is __.", answer: "10000", points: 15 },
+                { id: "ex8-4", type: "fill-in-blank", question: "The predecessor of 20,001 is __.", answer: "20000", points: 15 },
+                { id: "ex8-5", type: "fill-in-blank", question: "What comes just after 5,43,210?", answer: "543211", points: 15 },
+                { id: "ex8-6", type: "fill-in-blank", question: "What comes just before 8,00,000?", answer: "799999", points: 20, hint: "Think about 800 - 1 = 799." },
+                { id: "ex8-7", type: "fill-in-blank", question: "Is 101 the successor or predecessor of 100?", answer: "successor", points: 10 },
+                { id: "ex8-8", type: "fill-in-blank", question: "Fill in the blank: __, 650, 651", answer: "649", points: 10, hint: "This is the predecessor of 650." },
+                { id: "ex8-9", type: "fill-in-blank", question: "What is the successor of the smallest 5-digit number?", answer: "10001", points: 15, hint: "Smallest 5-digit is 10,000." },
+                { id: "ex8-10", type: "fill-in-blank", question: "What is the predecessor of the smallest 4-digit number?", answer: "999", points: 15, hint: "Smallest 4-digit is 1,000." }
+            ],
+            badgeId: "badge_topic8"
+        },
+        { // New Topic 9
+            id: "topic9",
+            title: "Place Value vs. Face Value",
+            file: "topics/topic9.html",
+            exercises: [
+                // 10 new exercises for Topic 9
+                { id: "ex9-1", type: "fill-in-blank", question: "In 567, what is the face value of the digit 6?", answer: "6", points: 10 },
+                { id: "ex9-2", type: "fill-in-blank", question: "In 567, what is the place value of the digit 6?", answer: "60", points: 15, hint: "The 6 is in the Tens place." },
+                { id: "ex9-3", type: "fill-in-blank", question: "In 8,024, the face value of 8 is __.", answer: "8", points: 10 },
+                { id: "ex9-4", type: "fill-in-blank", question: "In 8,024, the place value of 8 is __.", answer: "8000", points: 15, hint: "The 8 is in the Thousands place." },
+                { id: "ex9-5", type: "fill-in-blank", question: "Place Value = Face Value x Value of the __.", answer: "place", points: 10 },
+                { id: "ex9-6", type: "fill-in-blank", question: "In 3,45,678, what is the face value of the digit 4?", answer: "4", points: 10 },
+                { id: "ex9-7", type: "fill-in-blank", question: "In 3,45,678, what is the place value of the digit 4?", answer: "40000", points: 15, hint: "The 4 is in the Ten Thousands place." },
+                { id: "ex9-8", type: "fill-in-blank", question: "In 9,01,234, what is the place value of the digit 0?", answer: "0", points: 10, hint: "0 times anything is 0." },
+                { id: "ex9-9", type: "fill-in-blank", question: "In 7,57,123, what is the place value of the leftmost 7?", answer: "700000", points: 20, hint: "It's in the Lakhs place." },
+                { id: "ex9-10", type: "fill-in-blank", question: "In 7,57,123, what is the place value of the other 7?", answer: "7000", points: 20, hint: "It's in the Thousands place." }
+            ],
+            badgeId: "badge_topic9"
         }
         // Add more topics here
     ],
@@ -97,7 +173,11 @@ const chapterData = {
         { id: "badge_topic2", name: "Place Value Pro", description: "Completed 'Place Value'", image: "assets/images/badge_placeholder.png" },
         { id: "badge_topic3", name: "Big Number Navigator", description: "Completed '5 and 6 Digit Numbers'", image: "assets/images/badge_placeholder.png" },
         { id: "badge_topic4", name: "Number Stretcher", description: "Completed 'Expanded Form'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic5", name: "Comparison Champ", description: "Completed 'Comparing Numbers'", image: "assets/images/badge_placeholder.png" }, // New Badge
+        { id: "badge_topic5", name: "Comparison Champ", description: "Completed 'Comparing Numbers'", image: "assets/images/badge_placeholder.png" },
+        { id: "badge_topic6", name: "Order Master", description: "Completed 'Ordering Numbers'", image: "assets/images/badge_placeholder.png" },
+        { id: "badge_topic7", name: "Number Architect", description: "Completed 'Forming Numbers'", image: "assets/images/badge_placeholder.png" },
+        { id: "badge_topic8", name: "Neighbor Navigator", description: "Completed 'Successor & Predecessor'", image: "assets/images/badge_placeholder.png" },
+        { id: "badge_topic9", name: "Value Virtuoso", description: "Completed 'Place vs. Face Value'", image: "assets/images/badge_placeholder.png" }, // New Badge
         { id: "badge_points100", name: "Century Scorer", description: "Earned 100 points", image: "assets/images/badge_placeholder.png", pointsRequired: 100 }
         // Add more badges here
     ]

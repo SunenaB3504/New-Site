@@ -31,7 +31,11 @@ New-Site/
 │   ├── topic2.html        # Example topic page 2
 │   ├── topic3.html        # Example topic page 3
 │   ├── topic4.html        # Example topic page 4
-│   └── topic5.html        # Example topic page 5
+│   ├── topic5.html        # Example topic page 5
+│   ├── topic6.html        # Example topic page 6
+│   ├── topic7.html        # Example topic page 7
+│   ├── topic8.html        # Example topic page 8
+│   └── topic9.html        # Example topic page 9
 │   └── ...                # More topic pages
 ├── assets/
 │   └── images/            # Images, badges, etc.

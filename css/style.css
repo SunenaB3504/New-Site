@@ -570,3 +570,274 @@ footer {
 #compare-next-btn:hover {
      background: #3a5a40;
 }
+
+/* Interactive Ordering Game Styles */
+.interactive-order {
+    background-color: #fff9c4; /* Light yellow background */
+    border: 1px solid #fff176;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.interactive-order h4 {
+    margin-bottom: 10px;
+    color: #f57f17; /* Amber/Yellow */
+}
+
+.order-numbers {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.order-numbers span {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.interactive-order input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 5px 10px 0;
+    width: 80%;
+    max-width: 300px;
+}
+
+.interactive-order button {
+    background: #fbc02d; /* Yellow button */
+    color: #333;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle; /* Align with input */
+}
+
+.interactive-order button:hover {
+    background: #f9a825;
+}
+
+#order-next-btn {
+     background: #588157; /* Match other buttons */
+     color: #fff;
+     margin-top: 10px; /* Ensure spacing */
+}
+#order-next-btn:hover {
+     background: #3a5a40;
+}
+
+/* Interactive Number Building Game Styles */
+.interactive-build {
+    background-color: #ede7f6; /* Deep purple light background */
+    border: 1px solid #d1c4e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.interactive-build h4 {
+    margin-bottom: 10px;
+    color: #512da8; /* Deep purple */
+}
+
+.build-digits {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.build-digits span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #d1c4e9; /* Lighter purple */
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.2em;
+    min-width: 30px;
+}
+
+.interactive-build p {
+    margin-bottom: 8px;
+}
+
+.interactive-build input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 5px 10px 0;
+    width: 60%;
+    max-width: 200px;
+}
+
+.interactive-build button {
+    background: #673ab7; /* Deep purple button */
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle; /* Align with input */
+}
+
+.interactive-build button:hover {
+    background: #512da8;
+}
+
+#build-next-btn {
+     background: #588157; /* Match other buttons */
+     color: #fff;
+     margin-top: 10px; /* Ensure spacing */
+}
+#build-next-btn:hover {
+     background: #3a5a40;
+}
+
+/* Interactive Neighbor Finder Styles */
+.interactive-neighbor {
+    background-color: #e1f5fe; /* Light blue background */
+    border: 1px solid #81d4fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.interactive-neighbor h4 {
+    margin-bottom: 10px;
+    color: #0277bd; /* Darker blue */
+}
+
+.interactive-neighbor label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.interactive-neighbor input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 60%;
+    max-width: 200px;
+}
+
+.neighbor-options {
+    margin-bottom: 15px;
+}
+
+.neighbor-option-btn {
+    background: #03a9f4; /* Light blue button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.neighbor-option-btn:hover {
+    background: #0288d1;
+}
+
+.neighbor-output {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 1.5em; /* Ensure space */
+    line-height: 1.4;
+    color: #01579b; /* Darkest blue */
+}
+
+/* Interactive Place/Face Value Finder Styles */
+.interactive-pfv {
+    background-color: #fff3e0; /* Light orange background */
+    border: 1px solid #ffe0b2;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.interactive-pfv h4 {
+    margin-bottom: 15px;
+    color: #e65100; /* Dark orange */
+}
+
+.interactive-pfv div {
+    margin-bottom: 10px;
+}
+
+.interactive-pfv label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.interactive-pfv input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px; /* Space between inputs if inline */
+    width: 60%;
+    max-width: 200px;
+}
+
+/* Specific width for digit input */
+#pfv-digit-input {
+    max-width: 80px;
+}
+
+
+.interactive-pfv button {
+    background: #ff9800; /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.interactive-pfv button:hover {
+    background: #f57c00;
+}
+
+.pfv-output {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 1.0em; /* Slightly smaller */
+    min-height: 1.5em; /* Ensure space */
+    line-height: 1.5;
+    color: #bf360c; /* Deep orange */
+    text-align: left; /* Align results left */
+}
+
+.pfv-output strong {
+    color: #e65100; /* Dark orange for labels */
+}

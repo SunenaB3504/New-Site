@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 9: Place Value vs. Face Value</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 9: Place Value vs. Face Value</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 9
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>What's a Digit Really Worth?</h2>
+                <p>We know digits live in different places in a number (Ones, Tens, Hundreds...). But does the digit itself change? Let's find out!</p>
+
+                <h3>Face Value: What You See!</h3>
+                <p>The <strong>face value</strong> of a digit is simply the digit itself, no matter where it is in the number.</p>
+                <ul>
+                    <li>In the number <strong>7</strong>35, the face value of 7 is just <strong>7</strong>.</li>
+                    <li>In the number 4,<strong>7</strong>02, the face value of 7 is still just <strong>7</strong>.</li>
+                    <li>In the number <strong>7</strong>,00,000, the face value of 7 is... you guessed it, <strong>7</strong>!</li>
+                </ul>
+                <p>Face value is easy – it's just the face of the digit!</p>
+
+                <h3>Place Value: Where It Lives Matters!</h3>
+                <p>The <strong>place value</strong> of a digit tells us its actual worth based on its <strong>position</strong> (place) in the number.</p>
+                <p>Think about money: a 1 Rupee coin is different from a 10 Rupee note, even though both have a '1'.</p>
+                <ul>
+                    <li>In the number 7<strong>3</strong>5, the digit 3 is in the Tens place. Its place value is 3 x 10 = <strong>30</strong>.</li>
+                    <li>In the number <strong>3</strong>,402, the digit 3 is in the Thousands place. Its place value is 3 x 1,000 = <strong>3,000</strong>.</li>
+                    <li>In the number 4,<strong>3</strong>5,329, the digit 3 in the Ten Thousands place has a place value of 3 x 10,000 = <strong>30,000</strong>. The digit 3 in the Hundreds place has a place value of 3 x 100 = <strong>300</strong>.</li>
+                </ul>
+
+                <h3>The Magic Formula!</h3>
+                <p>There's a simple way to remember how to find the place value:</p>
+                <p><strong>Place Value = Face Value × Value of the Place</strong></p>
+                <p>Example: In <strong>4</strong>,35,329</p>
+                <ul>
+                    <li>Digit: 4</li>
+                    <li>Face Value: 4</li>
+                    <li>Place: Lakhs (Value = 1,00,000)</li>
+                    <li>Place Value = 4 × 1,00,000 = <strong>4,00,000</strong></li>
+                </ul>
+                 <p>Example: In 4,3<strong>5</strong>,329</p>
+                 <ul>
+                     <li>Digit: 5</li>
+                     <li>Face Value: 5</li>
+                     <li>Place: Thousands (Value = 1,000)</li>
+                     <li>Place Value = 5 × 1,000 = <strong>5,000</strong></li>
+                 </ul>
+
+                <!-- Interactive Place/Face Value Finder -->
+                <div class="interactive-pfv visual-aid" style="background-color: #fff3e0; border-color: #ffcc80;"> <!-- Reusing class, slight style variation -->
+                    <h4>Place & Face Value Finder!</h4>
+                    <div>
+                        <label for="pfv-number-input">Enter a number (up to 6 digits):</label>
+                        <input type="number" id="pfv-number-input" min="0" max="999999" placeholder="e.g., 435329">
+                    </div>
+                    <div>
+                        <label for="pfv-digit-input">Enter the digit to find:</label>
+                        <input type="number" id="pfv-digit-input" min="0" max="9" placeholder="e.g., 3">
+                    </div>
+                    <button id="pfv-find-btn">Find Values</button>
+                    <div id="pfv-result" class="pfv-output">
+                        Results will appear here.
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic8.html">Previous Topic: Number Neighbors</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <!-- Add link to next topic if available -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic9
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic9');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractivePlaceFaceFinder(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

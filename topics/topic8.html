@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 8: Number Neighbors (Successor & Predecessor)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 8: Number Neighbors (Successor & Predecessor)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 8
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>Who Comes Next? Who Came Before?</h2>
+                <p>Every number has neighbors! There's the number that comes right after it, and the number that comes right before it (unless it's zero!).</p>
+
+                <h3>The Successor: The Next Number!</h3>
+                <p>The <strong>successor</strong> is the number that comes immediately <strong>after</strong> a given number.</p>
+                <p>How do you find it? Just <strong>add 1</strong>!</p>
+                <ul>
+                    <li>The successor of 7 is 7 + 1 = <strong>8</strong>.</li>
+                    <li>The successor of 99 is 99 + 1 = <strong>100</strong>.</li>
+                    <li>The successor of the biggest 5-digit number (99,999) is 99,999 + 1 = <strong>1,00,000</strong> (the smallest 6-digit number!).</li>
+                </ul>
+
+                <h3>The Predecessor: The Number Before!</h3>
+                <p>The <strong>predecessor</strong> is the number that comes immediately <strong>before</strong> a given number.</p>
+                <p>How do you find it? Just <strong>subtract 1</strong>!</p>
+                <ul>
+                    <li>The predecessor of 5 is 5 - 1 = <strong>4</strong>.</li>
+                    <li>The predecessor of 200 is 200 - 1 = <strong>199</strong>.</li>
+                    <li>The predecessor of the smallest 6-digit number (1,00,000) is 1,00,000 - 1 = <strong>99,999</strong> (the biggest 5-digit number!).</li>
+                </ul>
+                <p><strong>Important Note:</strong> The number 0 does not have a whole number predecessor (because we usually don't go into negative numbers here).</p>
+
+                <!-- Interactive Successor/Predecessor Finder -->
+                <div class="interactive-neighbor visual-aid" style="background-color: #e1f5fe; border-color: #4fc3f7;"> <!-- Reusing class, slight style variation -->
+                    <h4>Neighbor Finder!</h4>
+                    <label for="neighbor-input">Enter a number (0-999,999):</label>
+                    <input type="number" id="neighbor-input" min="0" max="999999" placeholder="e.g., 500">
+                    <div class="neighbor-options">
+                        Find the:
+                        <button id="neighbor-btn-pred" class="neighbor-option-btn">Predecessor (-1)</button>
+                        <button id="neighbor-btn-succ" class="neighbor-option-btn">Successor (+1)</button>
+                    </div>
+                    <div id="neighbor-result" class="neighbor-output">
+                        Result will appear here.
+                    </div>
+                </div>
+
+                <h3>Finding Neighbors in Patterns</h3>
+                <p>Successors and predecessors help us understand number patterns and sequences.</p>
+                <p>Example: 10,000, 10,001, ____ (The next number is the successor of 10,001, which is 10,002).</p>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic7.html">Previous Topic: Building Numbers</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic9.html">Next Topic: Place Value vs. Face Value</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic8
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic8');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveNeighborFinder(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>
