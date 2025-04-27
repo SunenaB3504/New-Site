@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Chapter 1 - Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mathematics - Chapter 1</h1>
+        <p id="chapter-title">Loading...</p>
+    </header>
+
+    <div class="container">
+        <nav>
+            <!-- Navigation can be added here if needed -->
+        </nav>
+
+        <main>
+            <section class="progress-section fade-in">
+                <h2>Your Progress</h2>
+                <div>
+                    Points: <span id="points-display">0</span>
+                </div>
+                <div>
+                    Chapter Progress: <span id="chapter-progress-text">0% Complete</span>
+                    <progress id="chapter-progress-bar" value="0" max="100"></progress>
+                </div>
+                <div id="badges-earned">
+                    <h3>Badges Earned:</h3>
+                    <p>Loading badges...</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Chapter Topics</h2>
+                <ul id="topic-list" class="topic-list">
+                    <!-- Topics will be loaded here by JavaScript -->
+                    <li>Loading topics...</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="js/storage.js"></script>
+    <script src="js/gamification.js"></script>
+    <!-- Load Main Script for this page -->
+    <script src="js/main.js"></script>
+</body>
+</html>

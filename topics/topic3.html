@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 3: Bigger Numbers! (5 and 6 Digits)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 3: Bigger Numbers! (5 and 6 Digits)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 3
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>Moving to Bigger Numbers!</h2>
+                <p>You know about Ones, Tens, Hundreds, and Thousands. Let's explore even bigger numbers!</p>
+
+                <h3>Hello, 5-Digit Numbers!</h3>
+                <p>What happens if we have the biggest 4-digit number, <strong>9,999</strong>, and add just one more?</p>
+                <p>We get <strong>10,000</strong>! This is the smallest 5-digit number, called <strong>Ten Thousand</strong>.</p>
+                <p>Think of it like having 10 bags, and each bag has 1,000 marbles. That's 10,000 marbles!</p>
+
+                <h3>Welcome, 6-Digit Numbers!</h3>
+                <p>Now, what if we have the biggest 5-digit number, <strong>99,999</strong>, and add one more?</p>
+                <p>We get <strong>1,00,000</strong>! This is the smallest 6-digit number, which we already learned is called <strong>One Lakh</strong>.</p>
+                <p>Imagine the price of a new bike or maybe even a small car – sometimes they cost lakhs of rupees!</p>
+
+                <h3>The Place Value Chart Grows!</h3>
+                <p>Our place value chart gets bigger too! We add new places for Ten Thousands and Lakhs.</p>
+                <p>Remember the families (periods)?</p>
+                <ul>
+                    <li><strong>Ones Period:</strong> Hundreds, Tens, Ones (H T O)</li>
+                    <li><strong>Thousands Period:</strong> Ten Thousands, Thousands (TTh Th)</li>
+                    <li><strong>Lakhs Period:</strong> Lakhs (L)</li>
+                </ul>
+                <!-- Interactive Place Value Chart up to Lakhs -->
+                <div class="interactive-pvc visual-aid" style="background-color: #e1f5fe; border-color: #b3e5fc;"> <!-- Reusing class, slight style variation -->
+                    <label for="pvc-input-lakhs">Enter a number (up to 6 digits):</label>
+                    <input type="number" id="pvc-input-lakhs" max="999999" min="0" placeholder="e.g., 456789">
+                    <button id="pvc-update-btn-lakhs">Show in Chart</button>
+                    <div id="pvc-chart-lakhs" class="pvc-chart-container">
+                        <!-- Chart will be generated here -->
+                        <p>Enter a number and click 'Show in Chart'.</p>
+                    </div>
+                    <div id="pvc-expanded-form-lakhs" class="pvc-expanded-form">
+                        <!-- Expanded form will be shown here -->
+                    </div>
+                </div>
+
+                <h3>Commas are Your Friends!</h3>
+                <p>Commas help us read these big numbers. We put a comma after the Lakhs place and after the Thousands place.</p>
+                <p>Example: <strong>3,54,729</strong></p>
+                <ul>
+                    <li>The first comma separates Lakhs (3) from Thousands (54).</li>
+                    <li>The second comma separates Thousands (54) from Ones (729).</li>
+                </ul>
+                <p>This helps us read it as: "Three lakh, fifty-four thousand, seven hundred twenty-nine."</p>
+
+                <h3>Writing Numbers: Words to Digits</h3>
+                <p>Can you write the number when you hear the words?</p>
+                <ul>
+                    <li>"Thirty-six thousand, four hundred four" becomes <strong>36,404</strong>. (Notice the zero needed in the tens place!)</li>
+                    <li>"Six lakh, six" becomes <strong>6,00,006</strong>. (Lots of zeros needed here!)</li>
+                    <li>"Nine lakh, fifty-seven thousand" becomes <strong>9,57,000</strong>. (Zeros needed for the Ones period!)</li>
+                </ul>
+
+                <h3>Writing Numbers: Digits to Words</h3>
+                <p>You can also write the number names from the digits.</p>
+                <p>Example: <strong>5,82,314</strong> is "Five lakh, eighty-two thousand, three hundred fourteen".</p>
+
+                <h3>Stretching Big Numbers (Expanded Form)</h3>
+                <p>We can stretch out big numbers too!</p>
+                <p>Example: Let's stretch <strong>82,743</strong>.</p>
+                <ul>
+                    <li>8 is in the Ten Thousands place = 80,000</li>
+                    <li>2 is in the Thousands place = 2,000</li>
+                    <li>7 is in the Hundreds place = 700</li>
+                    <li>4 is in the Tens place = 40</li>
+                    <li>3 is in the Ones place = 3</li>
+                </ul>
+                <p>So, it's: <strong>80,000 + 2,000 + 700 + 40 + 3</strong></p>
+
+                <h3>Big Numbers in Real Life</h3>
+                <p>You see 5 and 6-digit numbers often! Think about:</p>
+                <ul>
+                    <li>The length of long rivers (maybe thousands of meters).</li>
+                    <li>The amount on an electricity bill (maybe thousands of rupees).</li>
+                    <li>The cost of cars (often in lakhs of rupees).</li>
+                </ul>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic2.html">Previous Topic: Understanding Place Value</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic4.html">Next Topic: Stretching Numbers</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic3
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic3');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractivePlaceValueChartLakhs(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

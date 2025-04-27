@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 2: Understanding Place Value (up to Lakhs)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 2: Understanding Place Value (up to Lakhs)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 2
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>What is Place Value?</h2>
+                <p>Imagine numbers live in houses on a street. Place value tells us which house (or place) a digit lives in, and that tells us how much it's worth!</p>
+                <p>A digit like '7' can mean 7 ones, 7 tens, or even 7 hundreds, depending on its place!</p>
+
+                <h3>Meet the Places!</h3>
+                <p>Numbers have different places, just like houses on a street. Here are some important ones:</p>
+                <ul>
+                    <li><strong>Ones</strong> (Like single candies)</li>
+                    <li><strong>Tens</strong> (Like packs of 10 candies)</li>
+                    <li><strong>Hundreds</strong> (Like boxes of 100 candies)</li>
+                    <li><strong>Thousands</strong></li>
+                    <li><strong>Ten Thousands</strong></li>
+                    <li><strong>Lakhs</strong> (This is a big place, like 100,000 candies!)</li>
+                </ul>
+                <p>When we talk about the length of a river, we might use Thousands. When we talk about the price of something expensive, like a bike, we might use Lakhs.</p>
+
+                <h3>What's a 'Lakh'?</h3>
+                <p>A 'Lakh' is just a name for a big number: <strong>100,000</strong> (one hundred thousand).</p>
+                <p>It's like having 10 big bags, and each bag has 10,000 marbles inside. All together, that's 1 Lakh marbles!</p>
+
+                <h3>Reading Big Numbers Easily</h3>
+                <p>Big numbers look scary, but commas help! We group the places into families (called <strong>periods</strong>): Ones, Thousands, and Lakhs.</p>
+                <p>Commas (,) act like little fences between the families.</p>
+                <ul>
+                    <li>The <strong>Ones</strong> family: Hundreds, Tens, Ones (like H T O)</li>
+                    <li>The <strong>Thousands</strong> family: Ten Thousands, Thousands (like TTh Th)</li>
+                    <li>The <strong>Lakhs</strong> family: Lakhs (L)</li>
+                </ul>
+                <p>Example: <strong>6,45,321</strong>. The commas show us: 6 (Lakhs family), 45 (Thousands family), 321 (Ones family). So we read it: "Six lakh, forty-five thousand, three hundred twenty-one". Easy!</p>
+
+                <h3>The Place Value Chart</h3>
+                <p>A place value chart is like a special organizer for numbers. It has columns for each place (Ones, Tens, Hundreds...). When you put a number's digits in the chart, you can clearly see what each digit is worth.</p>
+                <!-- Interactive Place Value Chart -->
+                <div class="interactive-pvc visual-aid">
+                    <label for="pvc-input">Enter a number (up to 6 digits):</label>
+                    <input type="number" id="pvc-input" max="999999" min="0" placeholder="e.g., 12345">
+                    <button id="pvc-update-btn">Show in Chart</button>
+                    <div id="pvc-chart" class="pvc-chart-container">
+                        <!-- Chart will be generated here -->
+                        <p>Enter a number and click 'Show in Chart'.</p>
+                    </div>
+                    <div id="pvc-expanded-form" class="pvc-expanded-form">
+                        <!-- Expanded form will be shown here -->
+                    </div>
+                </div>
+
+                <h3>Stretching Numbers Out (Expanded Form)</h3>
+                <p>Expanded form is like stretching a number out to see the value of each digit.</p>
+                <p>Example: Let's stretch out <strong>345</strong>.</p>
+                <ul>
+                    <li>The '3' is in the Hundreds place, so it's worth <strong>300</strong>.</li>
+                    <li>The '4' is in the Tens place, so it's worth <strong>40</strong>.</li>
+                    <li>The '5' is in the Ones place, so it's worth <strong>5</strong>.</li>
+                </ul>
+                <p>Stretched out, it's: <strong>300 + 40 + 5</strong>. That equals 345!</p>
+
+                <h3>Zero the Hero! (Placeholder)</h3>
+                <p>Zero (0) might look like nothing, but it's a super important hero! It holds a place open when there's nothing to count for that place.</p>
+                <p>Example: How do we write "Six lakh, six"? We need the first '6' way over in the Lakhs place, and the other '6' in the Ones place.</p>
+                <p>We write it: <strong>6,00,006</strong>.</p>
+                <p>The zeros are heroes holding the Ten Thousands, Thousands, Hundreds, and Tens places empty, so the 6s stay in the right spots!</p>
+
+                <h3>Place Value Power-Ups!</h3>
+                <p>Places are connected by the number 10!</p>
+                <ul>
+                    <li>10 Ones power up to become 1 Ten!</li>
+                    <li>10 Tens power up to become 1 Hundred!</li>
+                    <li>10 Hundreds power up to become 1 Thousand!</li>
+                    <li>...and so on, up to 10 Ten Thousands powering up to 1 Lakh!</li>
+                </ul>
+                <p>Knowing this helps when you add and subtract big numbers.</p>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                 <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic1.html">Previous Topic: Introduction</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic3.html">Next Topic: Bigger Numbers!</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic2
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic2');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractivePlaceValueChart();
+        });
+    </script>
+</body>
+</html>

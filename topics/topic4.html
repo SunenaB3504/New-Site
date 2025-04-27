@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 4: Stretching Numbers (Expanded Form)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 4: Stretching Numbers (Expanded Form)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 4
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>What is Expanded Form?</h2>
+                <p>Expanded form is like stretching a number out like a rubber band! It helps us see the real value of each digit inside the number.</p>
+                <p>Instead of just seeing '345', we see how the '3', '4', and '5' each add up to make the total.</p>
+
+                <h2>How to Stretch a Number</h2>
+                <p>It's easy! Just follow these steps:</p>
+                <ol>
+                    <li>Look at each digit in the number.</li>
+                    <li>Figure out its place value (Ones, Tens, Hundreds, Thousands, etc.).</li>
+                    <li>Multiply the digit by its place value. (Example: If '8' is in the Hundreds place, its value is 8 x 100 = 800).</li>
+                    <li>Write down the value of each digit as an addition sum.</li>
+                </ol>
+
+                <h3>Example: Stretching 82,743</h3>
+                <ul>
+                    <li><strong>8</strong> is in the Ten Thousands place: 8 x 10,000 = <strong>80,000</strong></li>
+                    <li><strong>2</strong> is in the Thousands place: 2 x 1,000 = <strong>2,000</strong></li>
+                    <li><strong>7</strong> is in the Hundreds place: 7 x 100 = <strong>700</strong></li>
+                    <li><strong>4</strong> is in the Tens place: 4 x 10 = <strong>40</strong></li>
+                    <li><strong>3</strong> is in the Ones place: 3 x 1 = <strong>3</strong></li>
+                </ul>
+                <p>So, the expanded form is: <strong>80,000 + 2,000 + 700 + 40 + 3</strong></p>
+
+                <h3>Example: Stretching 6,15,496</h3>
+                 <ul>
+                    <li><strong>6</strong> is in the Lakhs place: 6 x 1,00,000 = <strong>6,00,000</strong></li>
+                    <li><strong>1</strong> is in the Ten Thousands place: 1 x 10,000 = <strong>10,000</strong></li>
+                    <li><strong>5</strong> is in the Thousands place: 5 x 1,000 = <strong>5,000</strong></li>
+                    <li><strong>4</strong> is in the Hundreds place: 4 x 100 = <strong>400</strong></li>
+                    <li><strong>9</strong> is in the Tens place: 9 x 10 = <strong>90</strong></li>
+                    <li><strong>6</strong> is in the Ones place: 6 x 1 = <strong>6</strong></li>
+                </ul>
+                <p>So, the expanded form is: <strong>6,00,000 + 10,000 + 5,000 + 400 + 90 + 6</strong></p>
+
+                <h2>Putting Stretched Numbers Back Together</h2>
+                <p>You can also go backwards! If you see a stretched-out number, you can write the regular number (called the numeral).</p>
+
+                <h3>Example: Building from 7,00,000 + 5,000 + 40 + 5</h3>
+                <ul>
+                    <li>7,00,000 means '7' in the Lakhs place.</li>
+                    <li>There's no Ten Thousands, so we need a '0' there.</li>
+                    <li>5,000 means '5' in the Thousands place.</li>
+                    <li>There's no Hundreds, so we need a '0' there.</li>
+                    <li>40 means '4' in the Tens place.</li>
+                    <li>5 means '5' in the Ones place.</li>
+                </ul>
+                <p>Putting it together (using zeros as placeholders!): <strong>7,05,045</strong></p>
+
+                 <h3>Example: Building from 9,00,000 + 70,000 + 800 + 20</h3>
+                 <ul>
+                    <li>9,00,000 -> '9' in Lakhs place.</li>
+                    <li>70,000 -> '7' in Ten Thousands place.</li>
+                    <li>No Thousands -> '0' in Thousands place.</li>
+                    <li>800 -> '8' in Hundreds place.</li>
+                    <li>20 -> '2' in Tens place.</li>
+                    <li>No Ones -> '0' in Ones place.</li>
+                 </ul>
+                 <p>Putting it together: <strong>9,70,820</strong></p>
+
+                <h2>Place Value is Key!</h2>
+                <p>See? Expanded form is all about understanding place value! Each part of the stretched-out number shows exactly what a digit is worth because of where it lives in the number.</p>
+                <!-- Interactive Expanded Form Builder -->
+                <div class="interactive-efb visual-aid" style="background-color: #f3e5f5; border-color: #ab47bc;"> <!-- Reusing class, slight style variation -->
+                    <label for="efb-input">Enter a number (up to 6 digits):</label>
+                    <input type="number" id="efb-input" max="999999" min="0" placeholder="e.g., 82743">
+                    <button id="efb-update-btn">Show Expanded Form</button>
+                    <div id="efb-output-sum" class="efb-output">
+                        <strong>Expanded Form (Sum):</strong>
+                        <span id="efb-sum-result">Enter a number above.</span>
+                    </div>
+                    <div id="efb-output-place" class="efb-output">
+                        <strong>Expanded Form (Place Value):</strong>
+                        <span id="efb-place-result"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic3.html">Previous Topic: Bigger Numbers!</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic5.html">Next Topic: Comparing Numbers</a></li> <!-- Added link -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic4
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic4');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveExpandedFormBuilder(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

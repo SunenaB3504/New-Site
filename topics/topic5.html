@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 5: Which Number is Bigger?</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 5: Which Number is Bigger? (Comparing Numbers)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 5
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>Who Wins? Comparing Numbers!</h2>
+                <p>Imagine playing a game with number cards. How do you know who has the bigger number? Let's learn the rules!</p>
+                <p>We use special signs to compare:</p>
+                <ul>
+                    <li><strong>&gt;</strong> means "Greater Than" (The crocodile mouth eats the bigger number!)</li>
+                    <li><strong>&lt;</strong> means "Less Than"</li>
+                    <li><strong>=</strong> means "Equal To"</li>
+                </ul>
+
+                <h3>Rule 1: Count the Digits!</h3>
+                <p>This is the easiest rule! The number with <strong>more digits</strong> is always bigger.</p>
+                <p>Example: Compare <strong>75,431</strong> (5 digits) and <strong>1,20,798</strong> (6 digits).</p>
+                <p>Since 1,20,798 has more digits, it's the bigger number!</p>
+                <p>So, <strong>75,431 &lt; 1,20,798</strong></p>
+
+                <h3>Rule 2: Same Number of Digits? Look Left!</h3>
+                <p>If two numbers have the <strong>same number of digits</strong>, start comparing from the <strong>leftmost digit</strong> (the highest place value).</p>
+                <ol>
+                    <li>Look at the first digit on the left in both numbers.</li>
+                    <li>The number with the bigger digit here is the bigger number.</li>
+                    <li>If the first digits are the same, move to the next digit to the right and compare those.</li>
+                    <li>Keep moving right until you find digits that are different. The bigger digit wins!</li>
+                </ol>
+
+                <h4>Example 1: Compare 7,30,415 and 2,79,081</h4>
+                <ul>
+                    <li>Both have 6 digits.</li>
+                    <li>Look at the leftmost digit (Lakhs place): <strong>7</strong> and <strong>2</strong>.</li>
+                    <li>Since 7 is bigger than 2, the first number is bigger.</li>
+                </ul>
+                <p>So, <strong>7,30,415 &gt; 2,79,081</strong></p>
+
+                <h4>Example 2: Compare 4,12,892 and 4,83,005</h4>
+                 <ul>
+                    <li>Both have 6 digits.</li>
+                    <li>Look at the leftmost digit (Lakhs place): <strong>4</strong> and <strong>4</strong>. They are the same!</li>
+                    <li>Move to the next digit (Ten Thousands place): <strong>1</strong> and <strong>8</strong>.</li>
+                    <li>Since 8 is bigger than 1, the second number is bigger.</li>
+                </ul>
+                 <p>So, <strong>4,12,892 &lt; 4,83,005</strong></p>
+
+                <!-- Interactive Number Comparison Game -->
+                <div class="interactive-compare visual-aid" style="background-color: #dcedc8; border-color: #aed581;"> <!-- Reusing class, slight style variation -->
+                    <h4>Comparison Practice!</h4>
+                    <p>Which symbol goes between these numbers?</p>
+                    <div class="compare-numbers">
+                        <span id="compare-num1" class="compare-num">12345</span>
+                        <span class="compare-box">?</span>
+                        <span id="compare-num2" class="compare-num">6789</span>
+                    </div>
+                    <div class="compare-buttons">
+                        <button id="compare-btn-gt" class="compare-btn">&gt;</button>
+                        <button id="compare-btn-lt" class="compare-btn">&lt;</button>
+                        <button id="compare-btn-eq" class="compare-btn">=</button>
+                    </div>
+                    <div id="compare-feedback" class="feedback" style="margin-top: 10px;"></div>
+                    <button id="compare-next-btn" style="margin-top: 10px;">Next Pair</button>
+                </div>
+
+                <h2>Comparing Helps with Ordering!</h2>
+                <p>Once you know how to compare numbers, putting them in order is easy!</p>
+                <ul>
+                    <li><strong>Ascending Order:</strong> Arranging numbers from smallest to greatest (like climbing up stairs).</li>
+                    <li><strong>Descending Order:</strong> Arranging numbers from greatest to smallest (like sliding down).</li>
+                </ul>
+                <p>You just compare the numbers pair by pair to find the smallest or biggest one first!</p>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic4.html">Previous Topic: Stretching Numbers</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <!-- Add link to next topic if available -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic5
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic5');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveComparisonGame(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

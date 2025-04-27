@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 1: Introduction to Numbers</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 1: Introduction to Numbers</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 1
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>What are Numbers?</h2>
+                <p>Numbers help us count how many things there are. Think about your toys, fingers, or candies. Numbers tell us the quantity!</p>
+                <p>We use special symbols called <strong>digits</strong> to write numbers. The digits we use are:</p>
+                <div class="digits-display" style="font-size: 1.5em; font-weight: bold; margin: 10px 0; text-align: center; background-color: #e9f5e9; padding: 10px; border-radius: 5px;">
+                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+                </div>
+                <p>These ten digits can be used to write any number, big or small!</p>
+
+                <h2>Counting</h2>
+                <p>Counting is saying numbers in order, usually starting from 1. Let's count to ten:</p>
+                <p><strong>1 (one), 2 (two), 3 (three), 4 (four), 5 (five), 6 (six), 7 (seven), 8 (eight), 9 (nine), 10 (ten)</strong></p>
+                <p>Each number is one more than the number before it.</p>
+                <!-- Interactive Counting Visual -->
+                <div class="interactive-counter visual-aid">
+                    <p>Let's practice counting:</p>
+                    <button id="decrement-btn" class="counter-btn">-</button>
+                    <span id="counter-display" class="counter-display">0</span>
+                    <button id="increment-btn" class="counter-btn">+</button>
+                </div>
+
+                <h2>Writing Numbers</h2>
+                <p>We can write numbers using digits. For example:</p>
+                <ul>
+                    <li>The number five is written as: <strong>5</strong></li>
+                    <li>The number eight is written as: <strong>8</strong></li>
+                    <li>The number ten is written as: <strong>10</strong> (using the digits 1 and 0)</li>
+                </ul>
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+                 <!-- Add more topic-specific progress if needed -->
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <li><a href="topic2.html">Next Topic: Understanding Place Value</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic1
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic1');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractiveCounter(0, 10); // Example: Count from 0 to 10
+        });
+    </script>
+</body>
+</html>
