@@ -147,7 +147,7 @@ const chapterData = {
             ],
             badgeId: "badge_topic8"
         },
-        { // New Topic 9
+        { // Topic 9
             id: "topic9",
             title: "Place Value vs. Face Value",
             file: "topics/topic9.html",
@@ -165,6 +165,25 @@ const chapterData = {
                 { id: "ex9-10", type: "fill-in-blank", question: "In 7,57,123, what is the place value of the other 7?", answer: "7000", points: 20, hint: "It's in the Thousands place." }
             ],
             badgeId: "badge_topic9"
+        },
+        { // New Topic 10
+            id: "topic10",
+            title: "Place Value Power-Ups! (Relationships)",
+            file: "topics/topic10.html",
+            exercises: [
+                // 10 new exercises for Topic 10
+                { id: "ex10-1", type: "fill-in-blank", question: "10 tens = 1 __.", answer: "hundred", points: 10 },
+                { id: "ex10-2", type: "fill-in-blank", question: "10 thousands = 1 __ __.", answer: ["ten", "thousand"], points: 15 },
+                { id: "ex10-3", type: "fill-in-blank", question: "How many ones make 1 hundred? __", answer: "100", points: 15, hint: "Ones -> Tens (x10), Tens -> Hundreds (x10)" },
+                { id: "ex10-4", type: "fill-in-blank", question: "How many tens make 1 thousand? __", answer: "100", points: 15 },
+                { id: "ex10-5", type: "fill-in-blank", question: "1 Lakh = __ ten thousands.", answer: "10", points: 10 },
+                { id: "ex10-6", type: "fill-in-blank", question: "How many hundreds make 1 ten thousand? __", answer: "100", points: 20, hint: "Hundreds -> Thousands (x10), Thousands -> Ten Thousands (x10)" },
+                { id: "ex10-7", type: "fill-in-blank", question: "How many thousands make 1 lakh? __", answer: "100", points: 20 },
+                { id: "ex10-8", type: "fill-in-blank", question: "5 hundreds = __ tens.", answer: "50", points: 15, hint: "1 hundred = 10 tens." },
+                { id: "ex10-9", type: "fill-in-blank", question: "3 Lakhs = __ thousands.", answer: "300", points: 20, hint: "1 Lakh = 100 thousands." },
+                { id: "ex10-10", type: "fill-in-blank", question: "Each place value is __ times the place value to its right.", answer: "10", points: 10 }
+            ],
+            badgeId: "badge_topic10"
         }
         // Add more topics here
     ],
@@ -177,7 +196,8 @@ const chapterData = {
         { id: "badge_topic6", name: "Order Master", description: "Completed 'Ordering Numbers'", image: "assets/images/badge_placeholder.png" },
         { id: "badge_topic7", name: "Number Architect", description: "Completed 'Forming Numbers'", image: "assets/images/badge_placeholder.png" },
         { id: "badge_topic8", name: "Neighbor Navigator", description: "Completed 'Successor & Predecessor'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic9", name: "Value Virtuoso", description: "Completed 'Place vs. Face Value'", image: "assets/images/badge_placeholder.png" }, // New Badge
+        { id: "badge_topic9", name: "Value Virtuoso", description: "Completed 'Place vs. Face Value'", image: "assets/images/badge_placeholder.png" },
+        { id: "badge_topic10", name: "Power of Ten", description: "Completed 'Place Value Relationships'", image: "assets/images/badge_placeholder.png" }, // New Badge
         { id: "badge_points100", name: "Century Scorer", description: "Earned 100 points", image: "assets/images/badge_placeholder.png", pointsRequired: 100 }
         // Add more badges here
     ]

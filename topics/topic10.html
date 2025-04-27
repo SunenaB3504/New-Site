@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 10: Place Value Power-Ups!</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Topic 10: Place Value Power-Ups! (Relationships)</h1>
+    </header>
+
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Chapter Home</a> &gt; Topic 10
+        </nav>
+
+        <main>
+            <section class="content">
+                <h2>How Places Are Connected</h2>
+                <p>Have you noticed how the place value houses (Ones, Tens, Hundreds...) are related? It's like they have a secret power-up rule!</p>
+
+                <h3>The Magic of Ten!</h3>
+                <p>Every time you move one step to the <strong>left</strong> on the place value chart, the value gets <strong>10 times bigger</strong>!</p>
+                <ul>
+                    <li>You need <strong>10 Ones</strong> to make <strong>1 Ten</strong>. (10 x 1 = 10)</li>
+                    <li>You need <strong>10 Tens</strong> to make <strong>1 Hundred</strong>. (10 x 10 = 100)</li>
+                    <li>You need <strong>10 Hundreds</strong> to make <strong>1 Thousand</strong>. (10 x 100 = 1,000)</li>
+                    <li>You need <strong>10 Thousands</strong> to make <strong>1 Ten Thousand</strong>. (10 x 1,000 = 10,000)</li>
+                    <li>You need <strong>10 Ten Thousands</strong> to make <strong>1 Lakh</strong>. (10 x 10,000 = 1,00,000)</li>
+                </ul>
+                <p>It's like climbing a ladder where each step is 10 times higher!</p>
+                <div class="visual-aid" style="text-align: center; padding: 10px; background: #e8f5e9; border: 1px dashed #66bb6a; border-radius: 5px; margin: 15px 0;">
+                    Ones &rarr; (x10) &rarr; Tens &rarr; (x10) &rarr; Hundreds &rarr; (x10) &rarr; Thousands &rarr; (x10) &rarr; Ten Thousands &rarr; (x10) &rarr; Lakhs
+                </div>
+
+                <h3>Think About It!</h3>
+                <p>Knowing this "times 10" rule helps answer tricky questions:</p>
+                <ul>
+                    <li><strong>How many Tens make one Thousand?</strong>
+                        <ul>
+                            <li>From Tens to Hundreds is x10.</li>
+                            <li>From Hundreds to Thousands is x10.</li>
+                            <li>So, from Tens to Thousands is x10 x10 = x100.</li>
+                            <li>Answer: <strong>100</strong> tens make one thousand (100 x 10 = 1,000).</li>
+                        </ul>
+                    </li>
+                    <li><strong>How many Hundreds make one Lakh?</strong>
+                         <ul>
+                            <li>Hundreds &rarr; (x10) &rarr; Thousands</li>
+                            <li>Thousands &rarr; (x10) &rarr; Ten Thousands</li>
+                            <li>Ten Thousands &rarr; (x10) &rarr; Lakhs</li>
+                            <li>Total steps: x10 x10 x10 = x1000.</li>
+                            <li>Answer: <strong>1,000</strong> hundreds make one lakh (1,000 x 100 = 1,00,000).</li>
+                        </ul>
+                    </li>
+                     <li><strong>How many Thousands are there in 8 Lakhs?</strong>
+                         <ul>
+                             <li>From Thousands to Ten Thousands is x10.</li>
+                             <li>From Ten Thousands to Lakhs is x10.</li>
+                             <li>So, 1 Lakh has 10 x 10 = 100 Thousands.</li>
+                             <li>Therefore, 8 Lakhs has 8 x 100 = <strong>800</strong> Thousands.</li>
+                         </ul>
+                     </li>
+                </ul>
+
+                <!-- Interactive Place Value Converter -->
+                <div class="interactive-pvc-converter visual-aid" style="background-color: #fce4ec; border-color: #f8bbd0;"> <!-- Reusing class, slight style variation -->
+                    <h4>Place Value Converter</h4>
+                    <div>
+                        <label for="pvc-amount">Amount:</label>
+                        <input type="number" id="pvc-amount" value="1" min="1">
+
+                        <label for="pvc-from-place">From Place:</label>
+                        <select id="pvc-from-place">
+                            <option value="1">Ones</option>
+                            <option value="10">Tens</option>
+                            <option value="100">Hundreds</option>
+                            <option value="1000">Thousands</option>
+                            <option value="10000">Ten Thousands</option>
+                            <option value="100000">Lakhs</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pvc-to-place">To Place:</label>
+                        <select id="pvc-to-place">
+                            <option value="1">Ones</option>
+                            <option value="10" selected>Tens</option> <!-- Default selection -->
+                            <option value="100">Hundreds</option>
+                            <option value="1000">Thousands</option>
+                            <option value="10000">Ten Thousands</option>
+                            <option value="100000">Lakhs</option>
+                        </select>
+                    </div>
+                    <button id="pvc-convert-btn">Convert</button>
+                    <div id="pvc-result" class="pvc-converter-output">
+                        Result will appear here.
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="exercises">
+                <h2>Exercises</h2>
+                <div id="exercise-container">
+                    <!-- Exercises will be loaded here by JavaScript -->
+                    <p>Loading exercises...</p>
+                </div>
+                <button id="complete-topic-btn" style="display: none;">Mark Topic as Complete</button>
+                 <div id="topic-completion-feedback" class="feedback" style="display: none;"></div>
+            </section>
+
+             <section class="progress-section">
+                 <h3>Topic Progress</h3>
+                 <div>Points Earned in this Topic: <span id="topic-points">0</span></div>
+             </section>
+
+            <nav>
+                <ul>
+                    <li><a href="topic9.html">Previous Topic: Place Value vs. Face Value</a></li>
+                    <li><a href="../index.html">Back to Chapter Home</a></li>
+                    <!-- Add link to next topic if available -->
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Maths Learning App</p>
+    </footer>
+
+    <!-- Load Data First -->
+    <script src="../js/data.js"></script>
+    <!-- Load Helper Modules -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/gamification.js"></script>
+    <!-- Load Script for Topic Pages -->
+    <script src="../js/topics.js"></script>
+    <script>
+        // Initialize the topic page specifically for topic10
+        document.addEventListener('DOMContentLoaded', () => {
+            window.topicPage.initTopic('topic10');
+            // Initialize interactive elements specific to this topic
+            window.topicPage.initInteractivePlaceValueConverter(); // Call the specific initializer
+        });
+    </script>
+</body>
+</html>

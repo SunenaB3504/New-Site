@@ -841,3 +841,71 @@ footer {
 .pfv-output strong {
     color: #e65100; /* Dark orange for labels */
 }
+
+/* Interactive Place Value Converter Styles */
+.interactive-pvc-converter {
+    background-color: #fce4ec; /* Light pink background */
+    border: 1px solid #f8bbd0;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.interactive-pvc-converter h4 {
+    margin-bottom: 15px;
+    color: #ad1457; /* Dark pink */
+}
+
+.interactive-pvc-converter div {
+    margin-bottom: 10px;
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.interactive-pvc-converter label {
+    margin: 0 5px 0 10px; /* Spacing around labels */
+    font-weight: bold;
+}
+
+.interactive-pvc-converter input[type="number"],
+.interactive-pvc-converter select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px; /* Add margin for spacing when wrapped */
+}
+
+#pvc-amount {
+    max-width: 80px; /* Smaller width for amount */
+}
+
+.interactive-pvc-converter button {
+    background: #ec407a; /* Pink button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.interactive-pvc-converter button:hover {
+    background: #d81b60;
+}
+
+.pvc-converter-output {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 1.5em; /* Ensure space */
+    line-height: 1.4;
+    color: #880e4f; /* Darkest pink */
+}

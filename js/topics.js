@@ -58,6 +58,11 @@ const topicPage = {
     pfvDigitInputElement: null,
     pfvFindBtn: null,
     pfvResultElement: null,
+    pvcAmountElement: null,
+    pvcFromPlaceElement: null,
+    pvcToPlaceElement: null,
+    pvcConvertBtn: null,
+    pvcResultElement: null,
 
 
     initTopic: function(topicId) {
@@ -838,6 +843,61 @@ const topicPage = {
          }
 
         this.pfvResultElement.innerHTML = resultsHTML;
+    },
+
+    // New function to initialize the interactive Place Value Converter
+    initInteractivePlaceValueConverter: function() {
+        this.pvcAmountElement = document.getElementById('pvc-amount');
+        this.pvcFromPlaceElement = document.getElementById('pvc-from-place');
+        this.pvcToPlaceElement = document.getElementById('pvc-to-place');
+        this.pvcConvertBtn = document.getElementById('pvc-convert-btn');
+        this.pvcResultElement = document.getElementById('pvc-result');
+
+        if (this.pvcAmountElement && this.pvcFromPlaceElement && this.pvcToPlaceElement && this.pvcConvertBtn && this.pvcResultElement) {
+            this.pvcConvertBtn.onclick = () => this.convertPlaceValue();
+        } else {
+            console.warn("Place Value Converter elements not found on this page.");
+        }
+    },
+
+    // Converts between place values based on user input
+    convertPlaceValue: function() {
+        if (!this.pvcAmountElement || !this.pvcFromPlaceElement || !this.pvcToPlaceElement || !this.pvcResultElement) return;
+
+        const amount = parseInt(this.pvcAmountElement.value, 10);
+        const fromValue = parseInt(this.pvcFromPlaceElement.value, 10);
+        const toValue = parseInt(this.pvcToPlaceElement.value, 10);
+        const fromText = this.pvcFromPlaceElement.options[this.pvcFromPlaceElement.selectedIndex].text;
+        const toText = this.pvcToPlaceElement.options[this.pvcToPlaceElement.selectedIndex].text;
+
+        // Basic validation
+        if (isNaN(amount) || amount <= 0 || isNaN(fromValue) || isNaN(toValue)) {
+            this.pvcResultElement.textContent = 'Please enter a valid amount and select places.';
+            return;
+        }
+
+        if (fromValue === toValue) {
+            this.pvcResultElement.textContent = `${amount.toLocaleString('en-IN')} ${fromText} is equal to ${amount.toLocaleString('en-IN')} ${toText}.`;
+            return;
+        }
+
+        // Calculate total value and then divide by the target place value
+        const totalValue = amount * fromValue;
+        const resultAmount = totalValue / toValue;
+
+        // Format the result nicely
+        let resultText = `${amount.toLocaleString('en-IN')} ${fromText} = `;
+
+        // Check if the result is a whole number, handle potential floating point issues slightly
+        if (Math.abs(resultAmount - Math.round(resultAmount)) < 0.00001) {
+             resultText += `${Math.round(resultAmount).toLocaleString('en-IN')} ${toText}`;
+        } else {
+             // Handle cases like "1 Ten = 0.1 Hundreds"
+             resultText += `${resultAmount.toLocaleString('en-IN', { maximumFractionDigits: 5 })} ${toText}`;
+        }
+
+
+        this.pvcResultElement.textContent = resultText;
     },
 
 
