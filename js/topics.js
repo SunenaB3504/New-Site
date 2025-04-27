@@ -63,9 +63,10 @@ const topicPage = {
     pvcToPlaceElement: null,
     pvcConvertBtn: null,
     pvcResultElement: null,
-
+    scormInitialized: false, // Add flag for topic pages
 
     initTopic: function(topicId) {
+        this.initializeScorm(); // Initialize SCORM when a topic loads
         this.currentTopicId = topicId;
         this.topicData = window.chapterData.topics.find(t => t.id === topicId);
 
@@ -86,6 +87,39 @@ const topicPage = {
 
         // Note: Interactive element initialization is now called separately
         // from the HTML after initTopic runs.
+
+        // Ensure SCORM Finish is called when the window is closed/navigated away
+        // Redundant if main.js handles it reliably, but safer to include
+        window.addEventListener('unload', this.terminateScorm);
+        window.addEventListener('beforeunload', this.terminateScorm);
+    },
+
+    initializeScorm: function() {
+        // Prevent multiple initializations if navigating between topics quickly
+        if (!this.scormInitialized && typeof ScormInitialize === 'function') {
+             const success = ScormInitialize();
+             if (success === "true") {
+                 this.scormInitialized = true;
+                 // Set initial status if not already completed/passed
+                 const currentStatus = ScormGetValue("cmi.core.lesson_status");
+                 if (currentStatus !== "completed" && currentStatus !== "passed") {
+                     ScormSetValue("cmi.core.lesson_status", "incomplete");
+                     ScormCommit();
+                 }
+             }
+        }
+    },
+
+    terminateScorm: function() {
+        // Check if it was initialized before trying to finish
+        // Accessing via topicPage might be needed in event handlers
+        // if (topicPage.scormInitialized && typeof ScormFinish === 'function') {
+            console.log("Attempting to terminate SCORM connection from topic page.");
+            ScormSetValue("cmi.core.exit", ""); // Indicate normal exit
+            ScormCommit(); // Ensure data is saved before finishing
+            ScormFinish();
+            // topicPage.scormInitialized = false; // Reset flag
+        // }
     },
 
     // New function to initialize the interactive counter
@@ -1039,34 +1073,49 @@ const topicPage = {
         this.showCompletionMessage(`Topic completed! You earned ${this.topicPoints} points in this topic.`);
         const completeBtn = document.getElementById('complete-topic-btn');
         if(completeBtn) completeBtn.style.display = 'none'; // Hide button after completion
-        // Optionally update overall progress display if visible on the page
-        // window.gamification.updateProgressDisplay();
+
+        // Check for overall chapter completion and update SCORM
+        this.checkAndReportChapterCompletion();
+    },
+
+    checkAndReportChapterCompletion: function() {
+        const completedTopics = window.storage.getCompletedTopics();
+        const allTopics = window.chapterData.topics;
+        const allCompleted = allTopics.every(topic => completedTopics.includes(topic.id));
+
+        if (allCompleted) {
+            console.log("All topics completed. Setting SCORM status to completed.");
+            ScormSetValue("cmi.core.lesson_status", "completed"); // Or "passed" if score > threshold
+            // Report final score
+            const finalScore = window.storage.getPoints();
+            const maxScore = window.gamification.calculateMaxPossibleScore(); // Need to implement this
+            ScormSetValue("cmi.core.score.raw", finalScore);
+            ScormSetValue("cmi.core.score.max", maxScore);
+            ScormSetValue("cmi.core.score.min", 0);
+            ScormCommit(); // Commit completion status and score
+        } else {
+            // Optionally update score even if not complete
+            const currentScore = window.storage.getPoints();
+            ScormSetValue("cmi.core.score.raw", currentScore);
+            ScormCommit();
+        }
     },
 
     showCompletionMessage: function(message) {
-        const feedbackDiv = document.getElementById('topic-completion-feedback');
-        if (feedbackDiv) {
-            feedbackDiv.textContent = message;
-            feedbackDiv.className = 'feedback correct'; // Use 'correct' style for positive feedback
-            feedbackDiv.style.display = 'block';
+        const messageDiv = document.getElementById('completion-message');
+        if (messageDiv) {
+            messageDiv.textContent = message;
+            messageDiv.style.display = 'block';
+        }
+        // Also hide the complete button if it exists and is visible
+        const completeBtn = document.getElementById('complete-topic-btn');
+        if (completeBtn) {
+            completeBtn.style.display = 'none';
         }
     }
+
+    // REMOVE ALL DUPLICATED FUNCTIONS FROM HERE DOWN
+    // The duplicated block starts around line 900 with initInteractiveNumberBuilder
+    // and ends around line 1450 with the second pvcExpandedFormContainer property.
+
 };
-
-// Add simple shake animation CSS dynamically if needed, or put in style.css
-const styleSheet = document.styleSheets[0];
-try {
-    styleSheet.insertRule(`
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-    `, styleSheet.cssRules.length);
-} catch (e) {
-    console.warn("Could not insert shake animation rule:", e);
-}
-
-
-// Make topicPage object accessible globally
-window.topicPage = topicPage;

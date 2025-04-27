@@ -40,8 +40,8 @@ function addBadge(badgeId) {
         progress.badges.push(badgeId);
         saveProgress(progress);
         console.log(`Badge earned: ${badgeId}`);
-        // Optionally show a notification to the user here
-        alert(`New Badge Earned: ${window.chapterData.badges.find(b => b.id === badgeId)?.name || badgeId}!`);
+        // Removed alert: alert(`New Badge Earned: ${window.chapterData.badges.find(b => b.id === badgeId)?.name || badgeId}!`);
+        // Consider a less intrusive notification method if needed
     }
 }
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="NiaEd-Maths-Ch1-v1.0" version="1.0"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+            <general>
+                <title>
+                    <langstring xml:lang="en-US">Maths - Chapter 1: Numbers and Place Value</langstring>
+                </title>
+                <description>
+                    <langstring xml:lang="en-US">Interactive learning module for Class 4 Maths, Chapter 1.</langstring>
+                </description>
+            </general>
+            <technical>
+                 <format>text/html</format>
+                 <location>.</location>
+             </technical>
+        </lom>
+    </metadata>
+
+    <organizations default="NiaEd-Maths-Ch1-Org">
+        <organization identifier="NiaEd-Maths-Ch1-Org">
+            <title>Maths - Chapter 1: Numbers and Place Value</title>
+            <item identifier="ITEM-1" identifierref="RES-1">
+                <title>Chapter 1 Module</title>
+            </item>
+        </organization>
+    </organizations>
+
+    <resources>
+        <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+            <file href="index.html"/>
+            <file href="404.html"/>
+            <file href="css/style.css"/>
+            <file href="js/main.js"/>
+            <file href="js/topics.js"/>
+            <file href="js/storage.js"/>
+            <file href="js/gamification.js"/>
+            <file href="js/data.js"/>
+            <file href="js/scorm_api_wrapper.js"/>
+            <file href="js/APIWrapper.js"/>
+            <file href="topics/topic1.html"/>
+            <file href="topics/topic2.html"/>
+            <file href="topics/topic3.html"/>
+            <file href="topics/topic4.html"/>
+            <file href="topics/topic5.html"/>
+            <file href="topics/topic6.html"/>
+            <file href="topics/topic7.html"/>
+            <file href="topics/topic8.html"/>
+            <file href="topics/topic9.html"/>
+            <file href="topics/topic10.html"/>
+            <file href="assets/images/NiaEd-.png"/>
+            <!-- Add any other asset files if needed -->
+        </resource>
+    </resources>
+
+</manifest>

@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maths Chapter 1 - Homepage</title>
+    <title>Maths - Chapter 1</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="mainPage.handleLoad()" onunload="mainPage.handleUnload()"> <!-- Added SCORM handlers -->
+
     <header>
-        <h1>Mathematics - Chapter 1</h1>
-        <p id="chapter-title">Loading...</p>
+        <h1>Chapter 1: Numbers and Place Value</h1>
+        <p>Welcome! Let's explore the world of numbers.</p>
     </header>
 
     <div class="container">
@@ -49,10 +50,13 @@
 
     <!-- Load Data First -->
     <script src="js/data.js"></script>
+    <!-- Load SCORM API Wrapper -->
+    <script src="js/scorm_api_wrapper.js"></script> <!-- Added SCORM wrapper -->
     <!-- Load Helper Modules -->
     <script src="js/storage.js"></script>
     <script src="js/gamification.js"></script>
-    <!-- Load Main Script for this page -->
+    <!-- Load Main Script -->
     <script src="js/main.js"></script>
+
 </body>
 </html>
