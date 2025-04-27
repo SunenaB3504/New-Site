@@ -171,34 +171,43 @@ const chapterData = {
             title: "Place Value Power-Ups! (Relationships)",
             file: "topics/topic10.html",
             exercises: [
-                // 10 new exercises for Topic 10
-                { id: "ex10-1", type: "fill-in-blank", question: "10 tens = 1 __.", answer: "hundred", points: 10 },
-                { id: "ex10-2", type: "fill-in-blank", question: "10 thousands = 1 __ __.", answer: ["ten", "thousand"], points: 15 },
-                { id: "ex10-3", type: "fill-in-blank", question: "How many ones make 1 hundred? __", answer: "100", points: 15, hint: "Ones -> Tens (x10), Tens -> Hundreds (x10)" },
-                { id: "ex10-4", type: "fill-in-blank", question: "How many tens make 1 thousand? __", answer: "100", points: 15 },
-                { id: "ex10-5", type: "fill-in-blank", question: "1 Lakh = __ ten thousands.", answer: "10", points: 10 },
-                { id: "ex10-6", type: "fill-in-blank", question: "How many hundreds make 1 ten thousand? __", answer: "100", points: 20, hint: "Hundreds -> Thousands (x10), Thousands -> Ten Thousands (x10)" },
-                { id: "ex10-7", type: "fill-in-blank", question: "How many thousands make 1 lakh? __", answer: "100", points: 20 },
-                { id: "ex10-8", type: "fill-in-blank", question: "5 hundreds = __ tens.", answer: "50", points: 15, hint: "1 hundred = 10 tens." },
-                { id: "ex10-9", type: "fill-in-blank", question: "3 Lakhs = __ thousands.", answer: "300", points: 20, hint: "1 Lakh = 100 thousands." },
-                { id: "ex10-10", type: "fill-in-blank", question: "Each place value is __ times the place value to its right.", answer: "10", points: 10 }
+                // Updated questions for Topic 10
+                { id: "ex10-1", type: "fill-in-blank", question: "If you group 10 tens together, what single place value do you get? 1 __.", answer: "hundred", points: 10 },
+                { id: "ex10-2", type: "fill-in-blank", question: "Grouping 10 thousands gives you 1 __ __.", answer: ["ten", "thousand"], points: 15 },
+                { id: "ex10-3", type: "fill-in-blank", question: "How many single ones blocks do you need to make 1 hundred block? __", answer: "100", points: 15, hint: "Ones -> Tens (x10), Tens -> Hundreds (x10)" },
+                { id: "ex10-4", type: "fill-in-blank", question: "How many groups of ten (tens) are needed to equal one thousand? __", answer: "100", points: 15 },
+                { id: "ex10-5", type: "fill-in-blank", question: "One Lakh is the same as how many ten thousands? __ ten thousands.", answer: "10", points: 10 },
+                { id: "ex10-6", type: "fill-in-blank", question: "To make one ten thousand, how many hundreds do you need to combine? __", answer: "100", points: 20, hint: "Hundreds -> Thousands (x10), Thousands -> Ten Thousands (x10)" },
+                { id: "ex10-7", type: "fill-in-blank", question: "How many thousands fit exactly into one lakh? __", answer: "100", points: 20 },
+                { id: "ex10-8", type: "fill-in-blank", question: "If you have 5 hundreds, how many tens is that equal to? __ tens.", answer: "50", points: 15, hint: "1 hundred = 10 tens." },
+                { id: "ex10-9", type: "fill-in-blank", question: "The number 3 Lakhs represents how many thousands in total? __ thousands.", answer: "300", points: 20, hint: "1 Lakh = 100 thousands." },
+                { id: "ex10-10", type: "fill-in-blank", question: "When moving left on a place value chart, each place is how many times bigger than the place to its right? __ times.", answer: "10", points: 10 }
             ],
             badgeId: "badge_topic10"
         }
         // Add more topics here
     ],
     badges: [
-        { id: "badge_topic1", name: "Number Novice", description: "Completed 'Introduction to Numbers'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic2", name: "Place Value Pro", description: "Completed 'Place Value'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic3", name: "Big Number Navigator", description: "Completed '5 and 6 Digit Numbers'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic4", name: "Number Stretcher", description: "Completed 'Expanded Form'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic5", name: "Comparison Champ", description: "Completed 'Comparing Numbers'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic6", name: "Order Master", description: "Completed 'Ordering Numbers'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic7", name: "Number Architect", description: "Completed 'Forming Numbers'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic8", name: "Neighbor Navigator", description: "Completed 'Successor & Predecessor'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic9", name: "Value Virtuoso", description: "Completed 'Place vs. Face Value'", image: "assets/images/badge_placeholder.png" },
-        { id: "badge_topic10", name: "Power of Ten", description: "Completed 'Place Value Relationships'", image: "assets/images/badge_placeholder.png" }, // New Badge
-        { id: "badge_points100", name: "Century Scorer", description: "Earned 100 points", image: "assets/images/badge_placeholder.png", pointsRequired: 100 }
+        // Topic completion badges
+        { id: "badge_topic1", name: "Number Novice", description: "Completed 'Introduction to Numbers'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic2", name: "Place Value Pro", description: "Completed 'Place Value'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic3", name: "Big Number Navigator", description: "Completed '5 and 6 Digit Numbers'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic4", name: "Number Stretcher", description: "Completed 'Expanded Form'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic5", name: "Comparison Champ", description: "Completed 'Comparing Numbers'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic6", name: "Order Master", description: "Completed 'Ordering Numbers'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic7", name: "Number Architect", description: "Completed 'Forming Numbers'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic8", name: "Neighbor Navigator", description: "Completed 'Successor & Predecessor'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic9", name: "Value Virtuoso", description: "Completed 'Place vs. Face Value'", image: "assets/images/NiaEd-.png" },
+        { id: "badge_topic10", name: "Power of Ten", description: "Completed 'Place Value Relationships'", image: "assets/images/NiaEd-.png" },
+
+        // Point-based badges (New)
+        { id: "badge_points500", name: "Candy 🍬", description: "Earned 500 points", image: "assets/images/NiaEd-.png", pointsRequired: 500 },
+        { id: "badge_points1000", name: "Ice Cream 🍦", description: "Earned 1000 points", image: "assets/images/NiaEd-.png", pointsRequired: 1000 },
+        { id: "badge_points2000", name: "Burger 🍔", description: "Earned 2000 points", image: "assets/images/NiaEd-.png", pointsRequired: 2000 },
+        { id: "badge_points3000", name: "Fried Chicken 🍗", description: "Earned 3000 points", image: "assets/images/NiaEd-.png", pointsRequired: 3000 },
+        { id: "badge_points4000", name: "Pizza 🍕", description: "Earned 4000 points", image: "assets/images/NiaEd-.png", pointsRequired: 4000 },
+        { id: "badge_points5000", name: "Book 📖", description: "Earned 5000 points", image: "assets/images/NiaEd-.png", pointsRequired: 5000 },
+        { id: "badge_points10000", name: "Toy 🧸", description: "Earned 10000 points", image: "assets/images/NiaEd-.png", pointsRequired: 10000 }
         // Add more badges here
     ]
 };

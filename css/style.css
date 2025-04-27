@@ -217,7 +217,6 @@ progress {
     height: 50px;
     display: block;
     margin: 0 auto 5px auto;
-    background-color: #ddd; /* Placeholder background */
     border-radius: 50%;
 }
 
